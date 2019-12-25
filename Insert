@@ -1,0 +1,72 @@
+
+INSERT INTO stadler.Players(UserNamePK, TeamNameFK, FirstName, LastName, Age, KDR)
+VALUES
+('Xyp9x','Astralis', 'Andreas', 'Hojsleth', '24', '1.10'),
+('Magisk', 'Astralis', 'Emil', 'Reif', '21', '1.18'),
+('device', 'Astralis', 'Nicolai', 'Reedtz', '24', '1.26'),
+('gla1ve', 'Astralis', 'Lukas', 'Rossander', '24', '1.04'),
+('dupreeh','Astralis', 'Peter', 'Rasmussen', '26', '1.15'),
+('nitr0', 'Liquid', 'Nick', 'Canella', '24', '1.04'),
+('NAF', 'Liquid', 'Keith', 'Markovic', '22', '1.15'),
+('EliGE', 'Liquid', 'Jonathan', 'Jablonowski', '22', '1.10'),
+('Stewie2K','Liquid',  'Jake', 'Yip', '21', '1.05'),
+('Twistzz', 'Liquid', 'Russel', 'Dulken', '20', '1.21'),
+('flusha', 'fnatic', 'Robin', 'Ronnquist', '26', '1.12'),
+('JW', 'fnatic', 'Jesper', 'Wecksell', '24', '1.08'),
+('KRIMZ', 'fnatic', 'Freddy', 'Johansson', '25', '1.12'),
+('Golden', 'fnatic', 'Maikil', 'Selim', '25', '0.91'),
+('Brollan', 'fnatic', 'Ludvig', 'Brolin', '17', '1.09'),
+('jks', '100 Thieves', 'Justin', 'Savage', '24', '1.14'),
+('AZR', '100 Thieves', 'Aaron', 'Ward', '27', '1.01'),
+('jkaem', '100 Thieves', 'Joakim', 'Myrbostad', '25', '1.04'),
+('Gratisfaction', '100 Thieves', 'Sean', 'Kaiwai', '23', '1.15'),
+('Liazz',  '100 Thieves', 'Jay', 'Tregillgas', '22', '1.20');
+
+
+
+INSERT INTO stadler.Teams(TeamNamePK, Rank, AvgPlrAge, WksTop30, WLR)
+VALUES
+('Astralis', '1', '24.3', '220', '2.22'),
+('Liquid', '4', '22.2', '139', '1.54'),
+('fnatic', '2', '24.0', '201', '1.62'),
+('100 Thieves', '6', '24.6', '96', '1.36');
+
+
+INSERT INTO stadler.Location(LocationNamePK, LocationCity, LocationCountry)
+VALUES
+('iBUYPOWER Master 2019', 'Los Angeles','USA'),
+('BLAST Pro Series Sao Paulo 2019', 'Sao Paulo','Brazil'),
+('BLAST Pro Series Miami 2019', 'Miami','USA'),
+('IEM Sydney 2019', 'Sydney','Australia'),
+('ESL Pro League Season 9 Finals', 'Montpellier','France'),
+('ESL One Cologne 2019', 'Cologne','Germany'),
+('BLAST Pro Series Global Final 2019', 'Riffa','Bahrain'),
+('ESL Pro League Season 10 Finals', 'Odense','Denmark'),
+('ECS Season 8 Finals', 'Arlington','Texas'),
+('IEM Beijing 2019', 'Beijing','China'),
+('BLAST Pro Series Copenhagen 2019', 'Copenhagen','Denmark'),
+('ESL Pro League Season 10 Europe', 'London','United Kingdom'),
+('DreamHack Masters Malmo 2019', 'Malmo','Sweden'),
+('ESL One New York 2019', 'New York','USA');
+
+
+INSERT INTO stadler.Schedule(TeamOneFK, TeamTwoFK, LocationNameFK,GameDate,Winner)
+VALUES
+('Liquid','fnatic','iBUYPOWER Master 2019','2019-01-20','Liquid'),
+('Liquid','Astralis','iBUYPOWER Master 2019','2019-01-20','Liquid'),
+('Astralis','Liquid','BLAST Pro Series Sao Paulo 2019','2019-03-22','Astralis'),
+('Liquid','Astralis','Blast Pro Series Miami 2019','2019-04-13','Liquid'),
+('Liquid','fnatic','IEM Sydney 2019','2019-05-05','Liquid'),
+('Astralis','Liquid','ESL Pro League Season 9 Finals','2019-06-21','Liquid'),
+('fnatic','Astralis','ESL One Cologne 2019','2019-07-03','Astralis'),
+('Astralis','Liquid','BLAST Pro Series Global Final 2019','2019-12-12','Astralis'),
+('100 Thieves','fnatic','ESL Pro League Season 10 Finals','2019-12-05','fnatic'),
+('Liquid','Astralis','ECS Season 8 Finals','2019-12-01','Astralis'),
+('Liquid','fnatic','ECS Season 8 Finals','2019-11-30','Liquid'),
+('100 Thieves','Astralis','IEM Beijing 2019','2019-11-10','Astralis'),
+('100 Thieves','Astralis','IEM Beijing 2019','2019-11-07','Astralis'),
+('Liquid','Astralis','BLAST Pro Series Copenhagen 2019','2019-11-02','Astralis'),
+('fnatic','Astralis','ESL Pro League Season 10 Europe','2019-10-16','Astralis'),
+('fnatic','Astralis','DreamHack Masters Malmo 2019','2019-10-05','fnatic'),
+('Astralis','Liquid','ESL One New York 2019','2019-09-28','Astralis');
+

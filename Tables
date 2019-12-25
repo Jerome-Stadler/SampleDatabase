@@ -1,0 +1,31 @@
+CREATE TABLE stadler.Players(
+    UserNamePK VARCHAR(50) NOT NULL PRIMARY KEY,
+    TeamNameFK VARCHAR(50) NOT NULL FOREIGN KEY REFERENCES stadler.Teams(TeamNamePK),
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Age SMALLINT,
+    KDR FLOAT,
+);
+
+CREATE TABLE stadler.Teams(
+    TeamNamePK VARCHAR(50) NOT NULL PRIMARY KEY,
+    Rank SMALLINT,
+    AvgPlrAge FLOAT,
+    WksTop30 SMALLINT,
+    WLR FLOAT,
+);
+
+CREATE TABLE stadler.Location(
+    LocationNamePK VARCHAR(100) NOT NULL PRIMARY KEY,
+    LocationCountry VARCHAR(50),
+    LocationCity VARCHAR(50),
+);
+
+CREATE TABLE stadler.Schedule(
+    SchedulePK INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    TeamOneFK VARCHAR(50) NOT NULL FOREIGN KEY REFERENCES stadler.Teams(TeamNamePK),
+    TeamTwoFK VARCHAR(50) NOT NULL FOREIGN KEY REFERENCES stadler.Teams(TeamNamePK),
+    LocationNameFK VARCHAR(100) NOT NULL FOREIGN KEY REFERENCES stadler.Location(LocationNamePK),
+    GameDate date,
+    Winner VARCHAR(50),
+);

@@ -1,0 +1,21 @@
+-- Team Stats
+SELECT t.TeamNamePK as "Team Name", t.Rank as "Rank", t.AvgPlrAge as "Average Player Age", t.WksTop30 as "Weeks Top 30", t.WLR as "Win Loss Ratio"
+FROM stadler.Teams AS t
+    INNER JOIN stadler.Schedule AS s 
+        ON t.TeamNamePK = s.TeamOneFK
+GROUP BY t.TeamNamePK, t.Rank,t.AvgPlrAge,t.WksTop30,t.WLR
+ORDER BY t.Rank 
+
+--2019 Schedule 
+SELECT s.TeamOneFK as "Team One", s.TeamTwoFK as "Team Two", s.LocationNameFK as "Match Location", s.GameDate as "Game Date", s.Winner
+FROM stadler.Teams as t
+    INNER JOIN stadler.Schedule AS s
+        ON t.TeamNamePK = s.TeamOneFK
+ORDER BY s.GameDate
+
+-- Player Stats 
+SELECT p.UserNamePK as "UserName", p.FirstName as "First Name", p.LastName as "Last Name", p.Age, p.KDR as "Kill-Death Ratio", p.TeamNameFK as "Team" 
+FROM stadler.Teams as t
+    INNER JOIN stadler.Players as p 
+        ON t.TeamNamePK = p.TeamNameFK    
+ORDER BY p.TeamNameFK
